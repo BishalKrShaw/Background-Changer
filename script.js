@@ -15,15 +15,18 @@ function randomBGC() {
 
 // Function for changing BGC in every second
 function startChangingBGC() {
-    intervalBGC = setInterval(()=>{
-        const bgcolor = randomBGC();
-        document.body.style.backgroundColor = bgcolor;
-    }, 1000);
+    if(intervalBGC == null) {
+        intervalBGC = setInterval(()=>{
+            const bgcolor = randomBGC();
+            document.body.style.backgroundColor = bgcolor;
+        }, 1000);
+    }
 }
 
 // Function to stop changing BG color
 function stopChangingBGC() {
     clearInterval(intervalBGC);
+    intervalBGC = null;
 }
 
 // Start Button Click Event
