@@ -26,6 +26,12 @@ body{
     border-radius: 0.4rem;
     border: none;
     cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.15s;
+}
+
+#container button:active{
+    transform: scale(0.9);
 }
 
 #container #startBtn{
